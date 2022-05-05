@@ -8,6 +8,7 @@
 enum gripperROS_State{GRIPROS_STANDBY, GRIPROS_OPENING, GRIPROS_CLOSING, GRIPROS_SWITCH};
   //Pin Definitions
 #define SWITCH PA8
+#define FSR_PIN A3
 
 
 // Variable Creation
@@ -16,11 +17,15 @@ int currentButtonState; //! the current state of button
 
 gripperROS_State gripperActionROS;
 
-  //ROS message
+  //ROS message button
   ros::NodeHandle nh;
   std_msgs::Int8 buttonStateROS;
   ros::Publisher buttonPublisher("/foot_grasping/buttonState",&buttonStateROS);  
-  
+//ROS message fsr
+  std_msgs::Int8 fsrStateROS;
+  ros::Publisher fsrPublisher("/foot_grasping/buttonState",&fsrStateROS);  
+  int lower_th;
+  int upper_th;
 void setup() {
   //HW and variables Setup and Initialization
   pinMode(SWITCH,INPUT_PULLUP);
@@ -37,10 +42,12 @@ void setup() {
   }
   nh.loginfo("The interface to the button and fsr is connected");
   delay(1);
+  nh.getParam("/foot_grasping/fsr_lower_th", &lower_th);
+  nh.getParam("/foot_grasping/fsr_upper_th", &upper_th);
 }
 
 void loop() {
-  
+  int fsrValue = analogRead(FSR_PIN);
   lastButtonState    = currentButtonState;      // save the last state
   currentButtonState = digitalRead(SWITCH); // read new state
   if(currentButtonState - lastButtonState == 1) {
@@ -54,8 +61,20 @@ void loop() {
       break;
     }
   }
+
+  
+ if (fsrValue < lower_th)       // from 0 to 9
+    // Serial.println(" pressure");
+     gripperActionROS = GRIPROS_CLOSING;
+  else if (fsrValue > upper_th) // from 10 to 199
+    // Serial.println("no pressure");
+     gripperActionROS = GRIPROS_OPENING;
+
+
   buttonStateROS.data = (int8_t) gripperActionROS;
   buttonPublisher.publish(&buttonStateROS);
+  fsrStateROS.data = (int8_t) gripperActionROS;
+  fsrPublisher.publish(&fsrStateROS);
   nh.spinOnce();
   delay(5);
 }

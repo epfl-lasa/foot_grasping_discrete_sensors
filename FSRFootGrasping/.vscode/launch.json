@@ -1,0 +1,47 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+//
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "d:/Users/sarah/Documents/LASA/Code/Foot_Grasping/FSRFootGrasping/.pio/build/nucleo_l476rg/firmware.elf",
+            "projectEnvName": "nucleo_l476rg",
+            "toolchainBinDir": "C:/Users/sarah/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/sarah/.platformio/platforms/ststm32/misc/svd/STM32L476.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            }
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "d:/Users/sarah/Documents/LASA/Code/Foot_Grasping/FSRFootGrasping/.pio/build/nucleo_l476rg/firmware.elf",
+            "projectEnvName": "nucleo_l476rg",
+            "toolchainBinDir": "C:/Users/sarah/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/sarah/.platformio/platforms/ststm32/misc/svd/STM32L476.svd"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (without uploading)",
+            "executable": "d:/Users/sarah/Documents/LASA/Code/Foot_Grasping/FSRFootGrasping/.pio/build/nucleo_l476rg/firmware.elf",
+            "projectEnvName": "nucleo_l476rg",
+            "toolchainBinDir": "C:/Users/sarah/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "internalConsoleOptions": "openOnSessionStart",
+            "svdPath": "C:/Users/sarah/.platformio/platforms/ststm32/misc/svd/STM32L476.svd",
+            "loadMode": "manual"
+        }
+    ]
+}
