@@ -1,0 +1,41 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/rehassist/catkin_force_sensor/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/rehassist/catkin_hasler/devel/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_device_driver/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_node/bota_node/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_node/bota_signal_handler/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_node/bota_worker/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/endoscope_feedback/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/5_axis_platform/foot_platform_ros/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/foot_variables_sync/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/surgical_gripper/ros/gripper_ros/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/leg_as_robot/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_bus_manager/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_ethercat/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_factory/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_manager/include/**",
+        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_serial/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/surgical_sim/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/surgical_task/include/**",
+        "/home/rehassist/catkin_hasler/src/utils/include/**",
+        "/home/rehassist/catkin_hasler/src/hasler_project/utils_math/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,12 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/rehassist/catkin_force_sensor/devel/lib/python3/dist-packages",
+        "/home/rehassist/catkin_hasler/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/rehassist/catkin_force_sensor/devel/lib/python3/dist-packages",
+        "/home/rehassist/catkin_hasler/devel/lib/python3/dist-packages",
+        "/opt/ros/noetic/lib/python3/dist-packages"
+    ]
+}
