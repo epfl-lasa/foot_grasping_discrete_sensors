@@ -4,6 +4,7 @@
     <arg name="port"             default="/dev/grasping_micro" />   
     
     <rosparam file="$(find foot_grasping)/config/params_fsr.yaml" command="load" ns=""/>
+    
     <node pkg="rosserial_python" type="serial_node.py" name="grasping_micro" respawn="true" output="screen">
         <param name="baud" value="$(arg baud)"/>
         <param name="port" value="$(arg port)"/>

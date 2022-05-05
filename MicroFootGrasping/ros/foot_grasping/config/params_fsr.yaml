@@ -1,2 +1,2 @@
-fsr_lower_th: 10
-fsr_upper_th: 90
+foot_grasping:
+  fsr_threshold: 800
