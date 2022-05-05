@@ -5,11 +5,7 @@
 
 //Definitions
 
-enum gripperActionStateList
-{
-  OPEN_GRIPPER,
-  CLOSE_GRIPPER
-};
+enum gripperROS_State{GRIPROS_STANDBY, GRIPROS_OPENING, GRIPROS_CLOSING, GRIPROS_SWITCH};
   //Pin Definitions
 #define SWITCH PA8
 
@@ -17,7 +13,9 @@ enum gripperActionStateList
 // Variable Creation
 int lastButtonState;    //! the previous state of button
 int currentButtonState; //! the current state of button
-gripperActionStateList gripperActionROS;
+
+gripperROS_State gripperActionROS;
+
   //ROS message
   ros::NodeHandle nh;
   std_msgs::Int8 buttonStateROS;
@@ -28,7 +26,7 @@ void setup() {
   pinMode(SWITCH,INPUT_PULLUP);
   currentButtonState = digitalRead(SWITCH);
   lastButtonState = 0; currentButtonState = 0;
-  gripperActionROS = OPEN_GRIPPER;
+  gripperActionROS = GRIPROS_OPENING;
   //Ros setup
   nh.getHardware()->setBaud(460800);
   nh.initNode();
@@ -48,11 +46,11 @@ void loop() {
   if(currentButtonState - lastButtonState == 1) {
     switch (gripperActionROS)
     {
-    case OPEN_GRIPPER:
-      gripperActionROS = CLOSE_GRIPPER;
+    case GRIPROS_OPENING:
+      gripperActionROS = GRIPROS_CLOSING;
       break;
-    case CLOSE_GRIPPER:
-      gripperActionROS = OPEN_GRIPPER;
+    case GRIPROS_CLOSING:
+      gripperActionROS = GRIPROS_OPENING;
       break;
     }
   }
