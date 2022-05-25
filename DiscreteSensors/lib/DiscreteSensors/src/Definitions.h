@@ -1,0 +1,9 @@
+#ifndef DEFINITIONS_H
+#define DEFINITIONS_H
+
+#include "Definition_pins.h"
+
+enum gripperROS_State{GRIPROS_STANDBY, GRIPROS_OPENING, GRIPROS_CLOSING, GRIPROS_SWITCH, NB_GRIPROS_STATES};
+enum gripperLaterality{RIGHT_GRIPPER, LEFT_GRIPPER,NB_GRIPPERS};
+
+#endif // DEFINITIONS_H

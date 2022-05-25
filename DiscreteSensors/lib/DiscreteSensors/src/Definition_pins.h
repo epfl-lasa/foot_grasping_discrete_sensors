@@ -3,7 +3,9 @@
 
 #include "Arduino.h"
 
-// const int SPIN = PB6;
-// const int GND_PIN = PA10;
+  //Pin Definitions
+const int SWITCH_PIN[] = {D7, D6};
+const int FSR_PIN[] = {A3, A5};
+
 
 #endif // DEFINITIONS_PINS_H

@@ -1,0 +1,10 @@
+right:
+  foot_grasping:
+    #fsr_threshold_low: 2600
+    #fsr_threshold_up: 3700
+    fsr_threshold_low: 1400
+    fsr_threshold_up: 2500
+left:
+  foot_grasping:
+    fsr_threshold_low: 1400
+    fsr_threshold_up: 2500
