@@ -13,7 +13,7 @@ void getParamsFSR(gripperLaterality id)
     sprintf(msg,"no %s fsr_threshold_low param found", gripperNames[id]);
     nh.logerror(msg);
   }else{
-    sprintf(msg,"%s fsr_threshold_low %d param loaded", gripperNames[id], &fsrSensors[id]._fsrThreshold_low);
+    sprintf(msg,"%s fsr_threshold_low %d param loaded", gripperNames[id], fsrSensors[id]._fsrThreshold_low);
     nh.loginfo(msg);
   }
 
@@ -22,7 +22,7 @@ void getParamsFSR(gripperLaterality id)
     sprintf(msg,"no %s fsr_threshold_up param found", gripperNames[id]);
     nh.logerror(msg);
   }else{
-    sprintf(msg,"%s fsr_threshold_up %d param loaded", gripperNames[id], &fsrSensors[id]._fsrThreshold_up);
+    sprintf(msg,"%s fsr_threshold_up %d param loaded", gripperNames[id], fsrSensors[id]._fsrThreshold_up);
     nh.loginfo(msg);
   }
   

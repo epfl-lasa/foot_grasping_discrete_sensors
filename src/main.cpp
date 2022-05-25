@@ -53,18 +53,16 @@ void loop() {
     {
       if (disconnectedFromRos)
       {
-      
         getParamsFSR((gripperLaterality) i);
-        disconnectedFromRos=false;
+        if (i==NB_GRIPPERS-1) { disconnectedFromRos= false;}
       }
       buttonSensors[i].step();
       fsrSensors[i].step();
-    }  
-    }else
-    {
-      disconnectedFromRos = true;
     }
-
-    nh.spinOnce();
-    delay(5);
+  }else
+  {
+    disconnectedFromRos = true;
+  }
+  nh.spinOnce();
+  delay(10);
 }
