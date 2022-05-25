@@ -1,41 +1,123 @@
+//
+// !!! WARNING !!! AUTO-GENERATED FILE!
+// PLEASE DO NOT MODIFY IT AND USE "platformio.ini":
+// https://docs.platformio.org/page/projectconf/section_env_build.html#build-flags
+//
 {
-  "configurations": [
-    {
-      "browse": {
-        "databaseFilename": "${workspaceFolder}/.vscode/browse.vc.db",
-        "limitSymbolsToIncludedHeaders": false
-      },
-      "includePath": [
-        "/home/rehassist/catkin_force_sensor/devel/include/**",
-        "/opt/ros/noetic/include/**",
-        "/home/rehassist/catkin_hasler/devel/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_device_driver/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_node/bota_node/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_node/bota_signal_handler/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/bota_node/bota_worker/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/endoscope_feedback/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/5_axis_platform/foot_platform_ros/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/foot_variables_sync/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/surgical_gripper/ros/gripper_ros/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/leg_as_robot/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_bus_manager/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_ethercat/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_factory/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_manager/include/**",
-        "/home/rehassist/catkin_force_sensor/src/bota_driver/rokubimini_serial/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/surgical_sim/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/surgical_task/include/**",
-        "/home/rehassist/catkin_hasler/src/utils/include/**",
-        "/home/rehassist/catkin_hasler/src/hasler_project/utils_math/include/**",
-        "/usr/include/**"
-      ],
-      "name": "ROS",
-      "intelliSenseMode": "gcc-x64",
-      "compilerPath": "/usr/bin/gcc",
-      "cStandard": "gnu11",
-      "cppStandard": "c++14"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "PlatformIO",
+            "includePath": [
+                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/include",
+                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/src",
+                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/DiscreteSensors/src",
+                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/LP_Filter/src",
+                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/ros_lib",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/OpenAMP",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/hid",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/cdc",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32L4xx_HAL_Driver/Inc",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32L4xx_HAL_Driver/Src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/STM32L4xx",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/open-amp/lib/include",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/libmetal/lib/include",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/virtual_driver",
+                "/home/rehassist/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc",
+                "/home/rehassist/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
+                "/home/rehassist/.platformio/packages/framework-cmsis/CMSIS/DSP/PrivateInclude",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/variants/STM32L4xx/L475R(C-E-G)T_L476R(C-E-G)T_L486RGT",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Keyboard/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Mouse/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/RGB_LED_TLC59731/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/src",
+                "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
+                ""
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": true,
+                "path": [
+                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/include",
+                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/src",
+                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/DiscreteSensors/src",
+                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/LP_Filter/src",
+                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/ros_lib",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/LL",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/OpenAMP",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/hid",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32/usb/cdc",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32L4xx_HAL_Driver/Inc",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/STM32L4xx_HAL_Driver/Src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/STM32L4xx",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Inc",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/ST/STM32_USB_Device_Library/Core/Src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/open-amp/lib/include",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/libmetal/lib/include",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Middlewares/OpenAMP/virtual_driver",
+                    "/home/rehassist/.platformio/packages/framework-cmsis/CMSIS/Core/Include",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32L4xx/Include",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/system/Drivers/CMSIS/Device/ST/STM32L4xx/Source/Templates/gcc",
+                    "/home/rehassist/.platformio/packages/framework-cmsis/CMSIS/DSP/Include",
+                    "/home/rehassist/.platformio/packages/framework-cmsis/CMSIS/DSP/PrivateInclude",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/variants/STM32L4xx/L475R(C-E-G)T_L476R(C-E-G)T_L486RGT",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/CMSIS_DSP/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/EEPROM/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/IWatchdog/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Keyboard/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Mouse/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/RGB_LED_TLC59731/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Servo/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SoftwareSerial/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SrcWrapper/src",
+                    "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/Wire/src",
+                    ""
+                ]
+            },
+            "defines": [
+                "PLATFORMIO=60001",
+                "STM32L476xx",
+                "STM32L4xx",
+                "ARDUINO=10808",
+                "ARDUINO_ARCH_STM32",
+                "ARDUINO_NUCLEO_L476RG",
+                "BOARD_NAME=\"NUCLEO_L476RG\"",
+                "HAL_UART_MODULE_ENABLED",
+                "USE_FULL_LL_DRIVER",
+                "VARIANT_H=\"variant_NUCLEO_L476RG.h\"",
+                ""
+            ],
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "compilerPath": "/home/rehassist/.platformio/packages/toolchain-gccarmnoneeabi/bin/arm-none-eabi-gcc",
+            "compilerArgs": [
+                "-mfpu=fpv4-sp-d16",
+                "-mfloat-abi=hard",
+                "-mcpu=cortex-m4",
+                "-mthumb",
+                ""
+            ]
+        }
+    ],
+    "version": 4
 }
