@@ -10,11 +10,12 @@
 
 class Button_Sensor{
     public:
-        Button_Sensor(gripperLaterality id);
+        Button_Sensor(gripperLaterality id, ros::NodeHandle* nh);
         ~Button_Sensor();
         void setup(), step();
-        ros::Publisher* _buttonPublisher;  
     private: 
+        ros::Publisher* _buttonPublisher;  
+        ros::NodeHandle* _nh;
         gripperLaterality _myID;
         int _lastButtonState, _currentButtonState;
         gripperROS_State _gripperActionButtonROS;

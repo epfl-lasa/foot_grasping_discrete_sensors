@@ -9,18 +9,23 @@
 #include "Definitions.h"
 #include "LP_Filter.h"
 
+#define NB_SAMPLES_VARIABLE_SET_POINT 100
+
 class FSR_Sensor{
     public:
-        FSR_Sensor(gripperLaterality id);
+        FSR_Sensor(gripperLaterality id, ros::NodeHandle* nh);
         ~FSR_Sensor();
-        int _fsrThreshold_low, _fsrThreshold_up;
         void setup(), step();
-        ros::Publisher *_fsrStatePublisher, *_fsrContinuousPublisher;  
+        void getParamsROS();
     private: 
+        ros::Publisher *_fsrStatePublisher, *_fsrContinuousPublisher; 
+        ros::NodeHandle* _nh; 
         gripperLaterality _myID;
+        int _deltaThreshold, _variableThreshold;
         int _lastFSRState, _currentFSRState;
-        int _fsrValue, _fsrSwitch, _fsrAllowSwitch;
+        int _fsrValue, _fsrSwitch, _fsrAllowSwitch, _fsrVariableOffset, _fsrCountSamples, _fsrAverageNbSamples;
         LP_Filter _fsrFilter;
+        float _fsrFilterAlpha;
         gripperROS_State _gripperActionFSRROS;
         //ROS message fsr
         std_msgs::Int16 _fsrContinuousROS;

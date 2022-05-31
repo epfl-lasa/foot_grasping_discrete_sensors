@@ -2,7 +2,7 @@
 #include "Button_Sensor.h"
 
 
-Button_Sensor::Button_Sensor(gripperLaterality id): _myID(id){
+Button_Sensor::Button_Sensor(gripperLaterality id, ros::NodeHandle* nh): _myID(id), _nh(nh){
     switch (_myID)
     {
     case RIGHT_GRIPPER:
@@ -20,6 +20,7 @@ void Button_Sensor::setup(){
     pinMode(SWITCH_PIN[_myID],INPUT_PULLUP);
     _currentButtonState = digitalRead(SWITCH_PIN[_myID]);
     _gripperActionButtonROS = GRIPROS_OPENING;
+    _nh->advertise(*_buttonPublisher);
 }
 
 void Button_Sensor::step(){

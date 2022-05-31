@@ -8,11 +8,11 @@
         {
             "name": "PlatformIO",
             "includePath": [
-                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/include",
-                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/src",
-                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/DiscreteSensors/src",
-                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/LP_Filter/src",
-                "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/ros_lib",
+                "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/include",
+                "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/src",
+                "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/lib/DiscreteSensors/src",
+                "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/lib/LP_Filter/src",
+                "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/lib/ros_lib",
                 "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
                 "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                 "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",
@@ -52,11 +52,11 @@
             "browse": {
                 "limitSymbolsToIncludedHeaders": true,
                 "path": [
-                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/include",
-                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/src",
-                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/DiscreteSensors/src",
-                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/LP_Filter/src",
-                    "/home/rehassist/catkin_hasler/src/Foot_Grasping/DiscreteSensors/lib/ros_lib",
+                    "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/include",
+                    "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/src",
+                    "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/lib/DiscreteSensors/src",
+                    "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/lib/LP_Filter/src",
+                    "/home/rehassist/catkin_hasler/src/hasler_project/foot_grasping_discrete_sensors/lib/ros_lib",
                     "/home/rehassist/.platformio/packages/framework-arduinoststm32/libraries/SPI/src",
                     "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/avr",
                     "/home/rehassist/.platformio/packages/framework-arduinoststm32/cores/arduino/stm32",

@@ -6,19 +6,21 @@
 #include "LP_Filter.h"
 #include "Button_Sensor.h"
 #include "FSR_Sensor.h"
-#include "aux.h"
+#include "utils_functions.h"
 
-// Variable Creation
-Button_Sensor buttonSensors[NB_GRIPPERS] {RIGHT_GRIPPER, LEFT_GRIPPER};
-FSR_Sensor fsrSensors[NB_GRIPPERS]{RIGHT_GRIPPER, LEFT_GRIPPER};
+//ROS Variables
+ros::NodeHandle nh;
+
+// Global Variable Creation
+Button_Sensor buttonSensors[NB_GRIPPERS] {{RIGHT_GRIPPER, &nh}, {LEFT_GRIPPER, &nh}};
+FSR_Sensor fsrSensors[NB_GRIPPERS]{{RIGHT_GRIPPER, &nh}, {LEFT_GRIPPER, &nh}};
 bool disconnectedFromRos;
 
-//ROS variables
-ros::NodeHandle nh;
+
 
 void setup() {
   //HW and variables Setup and Initialization
-  disconnectedFromRos=false;
+  disconnectedFromRos=true;
   analogReadResolution(12); 
   
     //Ros setup
@@ -29,11 +31,6 @@ void setup() {
   {
     buttonSensors[i].setup();
     fsrSensors[i].setup();
-    getParamsFSR((gripperLaterality) i); // function from aux.cpp
-    //Ros setup
-    nh.advertise(*buttonSensors[i]._buttonPublisher);
-    nh.advertise(*fsrSensors[i]._fsrContinuousPublisher);
-    nh.advertise(*fsrSensors[i]._fsrStatePublisher);
   }
   
   while(!nh.connected())
@@ -53,7 +50,7 @@ void loop() {
     {
       if (disconnectedFromRos)
       {
-        getParamsFSR((gripperLaterality) i);
+        fsrSensors[i].getParamsROS();
         if (i==NB_GRIPPERS-1) { disconnectedFromRos= false;}
       }
       buttonSensors[i].step();
